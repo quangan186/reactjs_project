@@ -4,7 +4,7 @@ import Home from "./pages/Home";
 import Store from "./pages/Store";
 import About from "./pages/About";
 import Contact from "./pages/Contact";
-
+import Cart from "./pages/Cart";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Login from "./pages/Login";
 import Register from "./pages/Register";
@@ -20,6 +20,7 @@ function App() {
             <Route path="/store" element={<Store />} />
             <Route path="/about" element={<About />} />
             <Route path="/contact" element={<Contact />} />
+            <Route path="/contact" element={<Cart />} />
             <Route path="/login" element={<Login />} />
             <Route path="/register" element={<Register />} />
           </Routes>

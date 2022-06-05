@@ -1,47 +1,105 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
-import "../styles/Navbar.scss"
+import "../styles/Navbar.scss";
 function Navbar() {
+  const [menuBtn, setMenuBtn] = useState(true);
+
+  const handleClick = () => {
+    setMenuBtn(!menuBtn);
+    if (menuBtn) {
+      document.getElementById("sidebarMenu").style.transform = "translateX(0)";
+      document.getElementById("sidebarMenu").style.opacity = "1";
+    } else {
+      document.getElementById("sidebarMenu").style.transform =
+        "translateX(200%)";
+      document.getElementById("sidebarMenu").style.opacity = "0";
+    }
+  };
+
   return (
     <>
-      <nav className="navbar navbar-expand-md bg-light">
-        <div className="container-fluid">
-          <Link to="/" className="navbar-brand">
-            Diablo
-          </Link>
+      {/* Desktop menu */}
+      <nav className="navigation-bar d-md-flex d-none">
+        <div className="logo">
+          <Link to="/">Diablo</Link>
+        </div>
 
-          <ul className="navbar-nav mx-auto">
-            <li className="nav-item">
-              <Link to="/" className="nav-link">
-                Home
-              </Link>
+        <div id="desktopMenu">
+          <ul>
+            <li>
+              <Link to="/">Home</Link>
             </li>
 
-            <li className="nav-item">
-              <Link to="/store" className="nav-link">
-                Store
-              </Link>
+            <li>
+              <Link to="/store">Store</Link>
             </li>
 
-            <li className="nav-item">
-              <Link to="/about" className="nav-link">
-                About
-              </Link>
+            <li>
+              <Link to="/about">About</Link>
             </li>
 
-            <li className="nav-item">
-              <Link to="/contact" className="nav-link">
-                Contact
-              </Link>
+            <li>
+              <Link to="/contact">Contact</Link>
             </li>
           </ul>
 
-          <ul className="navbar-nav">
-            <li className="nav-item">
-                <Link to="/login" className="nav-link">Login</Link>
+          <ul>
+            <li>
+              <Link to="/cart">
+                <i className="fa-solid fa-cart-shopping"></i>
+              </Link>
             </li>
-            <li className="nav-item">
-                <Link to="/register" className="nav-link">Register</Link>
+            <li>
+              <Link to="/login">Login</Link>
+            </li>
+            <li>
+              <Link to="/register">Register</Link>
+            </li>
+          </ul>
+        </div>
+      </nav>
+
+      {/* Mobile menu */}
+      <nav className="navigation-bar d-md-none d-flex">
+        <div className="logo">
+          <Link to="/">Diablo</Link>
+        </div>
+
+        <div className="nav-button d-flex align-items-center">
+          
+              <Link to="/cart">
+                <i className="fa-solid fa-cart-shopping text-dark"></i>
+              </Link>
+            
+              <i type="button" className="ti-menu px-3" onClick={handleClick}></i>
+            
+          
+        </div>
+
+        <div id="sidebarMenu">
+          <ul className="px-2">
+            <li>
+              <Link to="/">Home</Link>
+            </li>
+
+            <li>
+              <Link to="/store">Store</Link>
+            </li>
+
+            <li>
+              <Link to="/about">About</Link>
+            </li>
+
+            <li>
+              <Link to="/contact">Contact</Link>
+            </li>
+
+            <li>
+              <Link to="/login">Login</Link>
+            </li>
+
+            <li>
+              <Link to="/register">Register</Link>
             </li>
           </ul>
         </div>
