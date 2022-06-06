@@ -1,10 +1,19 @@
-import React from 'react';
+import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
+import Advertisement from '../components/Advertisement';
+import CardProduct from '../components/CardProduct';
+import ProductList from '../components/ProductList';
 
 function Home() {
     return (
-        <div>
-            Home
-        </div>
+        <>
+            <main className='main'>
+                <Advertisement />
+                <ProductList />   
+            </main>
+            
+            
+        </>
     );
 }
 
