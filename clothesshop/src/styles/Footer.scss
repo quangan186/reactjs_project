@@ -1,0 +1,55 @@
+$bgColor: #f7f7f7;
+
+$contentFontSize: 14px;
+@font-face {
+    font-family: logo;
+    src: url(../../public/Devilbreezedemi-P2xr.otf);
+}
+
+.footer{
+    background-color: $bgColor;
+    .about, .location, .support, .open-time{
+        width: 25%;
+    }
+
+    .logo{
+        font-family: logo;
+    }
+    h1{
+        height: 50px;
+    }
+    p{
+        font-size: $contentFontSize;
+    }
+    li{
+        font-size: $contentFontSize;
+        padding-bottom: 10px;
+        a{
+            padding: 0;
+            padding-bottom: 10px;
+        }
+    }
+    .useful-link{
+        li{
+            padding-bottom: 0;
+            a{
+            padding-bottom: 0;
+        }
+        }
+        
+    }
+}
+
+@media only screen and (max-width:768px) {
+    .footer{
+        .about, .location, .support, .open-time{
+            width: 100%;
+        }
+        h1{
+            height: fit-content;
+        }
+        a{
+            padding-bottom: 0;
+        }
+    }
+}

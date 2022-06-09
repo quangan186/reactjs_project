@@ -1,0 +1,14 @@
+@font-face {
+    font-family: logo;
+    src: url(../../public/Devilbreezedemi-P2xr.otf);
+}
+img{
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    border: 0.5px solid black;
+}
+
+.logo{
+    font-family: logo;
+}

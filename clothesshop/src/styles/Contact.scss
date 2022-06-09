@@ -1,0 +1,21 @@
+.row {
+    box-sizing: content-box;
+}
+
+.contact-form{
+    width: 50%;
+    height: auto;
+}
+
+.contatct-info{
+    width: 50%;
+    height: auto;
+}
+textarea{
+    resize: none;
+    height: 120px;
+    :active{
+        border: none;
+    }
+}
+

@@ -19,7 +19,8 @@ function Navbar() {
   return (
     <>
       {/* Desktop menu */}
-      <nav className="navigation-bar d-md-flex d-none">
+      <header className="header">
+        <nav className="navigation-bar d-md-flex d-none">
         <div className="logo">
           <Link to="/">Diablo</Link>
         </div>
@@ -48,12 +49,6 @@ function Navbar() {
               <Link to="/cart">
                 <i className="fa-solid fa-cart-shopping"></i>
               </Link>
-            </li>
-            <li>
-              <Link to="/login">Login</Link>
-            </li>
-            <li>
-              <Link to="/register">Register</Link>
             </li>
           </ul>
         </div>
@@ -93,17 +88,11 @@ function Navbar() {
             <li>
               <Link to="/contact">Contact</Link>
             </li>
-
-            <li>
-              <Link to="/login">Login</Link>
-            </li>
-
-            <li>
-              <Link to="/register">Register</Link>
-            </li>
           </ul>
         </div>
       </nav>
+      </header>
+      
     </>
   );
 }
