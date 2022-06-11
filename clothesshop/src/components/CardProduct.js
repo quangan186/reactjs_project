@@ -1,13 +1,15 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 
-function CardProduct() {
+function CardProduct(props) {
+  const {product} = props
+  const {imgSrc, name, price} = product
   return (
-    <div class="card w-25 mx-3 my-3">
-        <Link to="/store"></Link> <img src="https://cdn.ssstutter.com/products/nCRHI1bpbr1ZIsxG/122021/1639018137793.jpeg" className="card-img-top" alt="..." />
+    <div class="card w-25 mx-3 my-5">
+        <Link to="/product"><img src={imgSrc} className="card-img-top" alt="..." /></Link> 
         <div className="card-body">
-            <h5 className="card-title">Letter shirt</h5>
-            <p className="card-text">$20</p>
+            <h5 className="card-title">{name}</h5>
+            <p className="card-text">{new Intl.NumberFormat().format(price)} VND</p>
         </div>
     </div>
   )

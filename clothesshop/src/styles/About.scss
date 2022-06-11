@@ -2,13 +2,23 @@
     font-family: logo;
     src: url(../../public/Devilbreezedemi-P2xr.otf);
 }
-img{
-    width: 200px;
-    height: 200px;
-    border-radius: 50%;
-    border: 0.5px solid black;
+
+$backgroundAva: #20262F;
+$backgroundInfo: #171C26;
+
+.profile-img {
+    background-color: $backgroundAva;
+    img{
+        width: 200px;
+        height: 200px;
+        border-radius: 50%;
+        border: 0.5px solid black;
+    }
 }
 
+.profile-info{
+    background-color: $backgroundInfo;
+}
 .logo{
     font-family: logo;
 }

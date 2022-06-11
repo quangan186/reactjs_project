@@ -4,6 +4,9 @@ import { useForm } from "react-hook-form";
 import "../styles/Contact.scss"
 import { Link } from "react-router-dom";
 import Footer from "../components/Footer";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import {faFacebookSquare} from '@fortawesome/free-brands-svg-icons'
+import {faEnvelopeSquare, faPhoneSquare} from '@fortawesome/free-solid-svg-icons'
 function Contact() {
   return (
     <>
@@ -40,9 +43,9 @@ function Contact() {
           <div className="contatct-info w-100 px-5 border-start py-3">
             <h1 className="fs-3 pb-5 border-bottom">Contact information</h1>
             <ul className="navbar-nav py-5">
-              <li className="nav-item pb-5"><Link to="../https://www.facebook.com/profile.php?id=100013348872340" target="_blank" className="nav-link"><i className="fa-brands fa-facebook pe-3"></i>An Bui</Link></li>
-              <li className="nav-item pb-5"><i className="fa-solid fa-circle-envelope"></i>quangan186@gmail.com</li>
-              <li className="nav-item pb-5"><i className="fa-solid fa-circle-phone"></i>+84 773939468</li>
+              <li className="nav-item pb-5"><a href="https://www.facebook.com/profile.php?id=100013348872340" rel="noreferrer" target="_blank" className="nav-link"><FontAwesomeIcon icon={faFacebookSquare} className="me-2"/>An Bui</a></li>
+              <li className="nav-item pb-5"><FontAwesomeIcon icon={faEnvelopeSquare} className="me-2"/> quangan186@gmail.com</li>
+              <li className="nav-item pb-5"><FontAwesomeIcon icon={faPhoneSquare} className="me-2"/>+84 773939468</li>
             </ul>
           </div>
         </div>

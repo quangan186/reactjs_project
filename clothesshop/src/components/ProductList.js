@@ -1,25 +1,34 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import CardProduct from "./CardProduct";
 import "../styles/ProductList.scss"
-function ProductList() {
+
+// const useFetch = url => {
+//   const [data, setData] =  useState(null);
+//   const [loading, setLoading] = useState(true)
+  
+//   useEffect(async () =>{
+//     const responseJson = await fetch(url)
+//     const data = await responseJson.json();
+//     setData(data)
+//     setLoading(false);
+//   }, [])
+//     return {data, loading}
+// }
+
+function ProductList(props) {
+  // const [data, loading] = useFetch("https://apidojo-hm-hennes-mauritz-v1.p.rapidapi.com/regions/list")
+  const {products} = props
   return (
     <div className="products-container">
-      <h1 className="text-center my-5">Products</h1>
+      <h1 className="text-center my-5">Store</h1>
       <div className="products-list d-flex justify-content-evenly flex-wrap">
-        <CardProduct />
-        <CardProduct />
-        <CardProduct />
-        <CardProduct />
-        <CardProduct />
-        <CardProduct />
+        {products.map((product) => {
+          return(
+            <CardProduct product={product} imgSrc={product.imgSrc} name = {product.name} price = {product.price} key={product.id} />
+          )
+        })}
       </div>
-      <div className="view-more-btn d-flex justify-content-center align-items-center">
-        <Link to="/store" className="my-5 py-3 px-3 rounded-1 text-center d-inline-flex justify-content-center align-items-center bg-dark text-light view-more">
-            See more
-        </Link> 
-      </div>
-      
     </div>
   );
 }

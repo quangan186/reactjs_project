@@ -28,14 +28,14 @@ function About() {
             <h1 className="text-center my-3">About us</h1>
 
             <div className="profile d-md-flex  border">
-              <div className="profile-img w-100 px-auto text-center border-end">
-                <img src="../images/ava.JPG" alt="ava" className="my-3"/>
-                <h3>Bui Quang An</h3>
-                <p>Web developer, game developer</p>
+              <div className="profile-img w-100 px-auto text-center border-end py-5">
+                <img src="../images/ava.JPG" alt="ava"/>
+                <h3 className="text-white my-3">Bui Quang An</h3>
+                <p className="text-white">Web developer, game developer</p>
               </div>
 
               <div className="profile-info w-100">
-                <ul className="navbar-nav my-3 px-5">
+                <ul className="navbar-nav py-5 px-5 text-white">
                   <li className="nav-item pb-3">
                     <span className="fw-bold">Full name: </span>Bui Quang An
                   </li>

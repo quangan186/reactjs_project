@@ -1,10 +1,16 @@
 import React from 'react';
+import Footer from '../components/Footer';
+import Navbar from '../components/Navbar';
+import ProductList from '../components/ProductList';
 
-function Store() {
+function Store(props) {
+    const {products} = props
     return (
-        <div>
-            Store
-        </div>
+        <>
+            <Navbar />
+            <ProductList products={products} /> 
+            <Footer />
+        </>
     );
 }
 
