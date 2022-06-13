@@ -1,0 +1,33 @@
+$buttonHeight: 50px;
+
+.product-img {
+  // box-sizing: border-box;
+  object-fit: cover;
+  img {
+    width: 100%;
+    object-fit: cover;
+  }
+}
+
+.product-info{
+    .size-btn{
+        width: 50px;
+        height: $buttonHeight;
+    }
+    h1{
+        font-size: 30px;
+    }
+    .add-to-cart{
+        height: $buttonHeight;
+    }
+}
+// @media only screen and (max-width: 425px){
+//     .product-info{
+//         h3{
+//             font-size: 16px;
+//         }
+//         h1{
+//             font-size: 18px;
+//         }
+//     }
+// }

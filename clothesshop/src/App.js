@@ -7,6 +7,8 @@ import Cart from "./pages/Cart";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import React, { useState } from "react";
 import ProductDetails from "./components/ProductDetails";
+import Payment from "./pages/Payment";
+import Notification from "./pages/Notification";
 function App() {
   const [products, setProducts] = useState([
     {
@@ -73,12 +75,13 @@ function App() {
       <BrowserRouter>
           <Routes>
             <Route path="/" element={<Home products={products}/>} />
-            <Route path="/" element={<Home products={products}/>} />
             <Route path="/store" element={<Store products={products} />} />
             <Route path="/product" element={<ProductDetails />} />
             <Route path="/about" element={<About />} />
             <Route path="/contact" element={<Contact />} />
             <Route path="/cart" element={<Cart />} />
+            <Route path="/payment" element={<Payment />} />
+            <Route path="/notification" element={<Notification />} />
           </Routes>
       </BrowserRouter>
     </>

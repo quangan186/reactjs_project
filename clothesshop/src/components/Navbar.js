@@ -28,10 +28,6 @@ function Navbar() {
         <div id="desktopMenu">
           <ul>
             <li>
-              <Link to="/">Home</Link>
-            </li>
-
-            <li>
               <Link to="/store">Store</Link>
             </li>
 
