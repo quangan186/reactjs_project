@@ -1,8 +1,6 @@
 import React from "react";
 import Navbar from "../components/Navbar";
-import { useForm } from "react-hook-form";
 import "../styles/Contact.scss"
-import { Link } from "react-router-dom";
 import Footer from "../components/Footer";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import {faFacebookSquare} from '@fortawesome/free-brands-svg-icons'

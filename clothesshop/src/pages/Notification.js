@@ -3,7 +3,6 @@ import Footer from '../components/Footer'
 import Navbar from '../components/Navbar'
 import {faCircleCheck} from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { Link } from 'react-router-dom'
 import {faDownload} from '@fortawesome/free-solid-svg-icons'
 function Notification() {
   return (

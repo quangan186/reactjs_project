@@ -1,10 +1,9 @@
-import React, { useState } from "react";
+import React from "react";
 import { Link } from "react-router-dom";
 import Advertisement from "../components/Advertisement";
 import CardProduct from "../components/CardProduct";
 import Footer from "../components/Footer";
 import Navbar from "../components/Navbar";
-import ProductList from "../components/ProductList";
 
 function Home(props) {
   const { products } = props;
